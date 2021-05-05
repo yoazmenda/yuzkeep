@@ -62,9 +62,14 @@ footer p {
   color: #f5ba13;
   border: none;
   width: 60px;
-  height: 36px;
+  height: 23px;
   cursor: pointer;
-  outline: none;
+  outline: green;
+  border-radius: 7px;
+}
+
+.note button:hover {
+  background-color: chocolate;
 }
 
 form {

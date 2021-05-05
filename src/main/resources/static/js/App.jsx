@@ -1,7 +1,9 @@
 'use strict'
 
+var initialNotes = [{title: "First note", content: "This is your first note"}]
+
 function App() {
-    const [notes, setNotes] = React.useState([]);
+    const [notes, setNotes] = React.useState(initialNotes);
 
     function addNote(newNote) {
         setNotes(prevNotes => {
