@@ -2,10 +2,7 @@
 
 function LikeButton(props) {
     const [liked, setLiked] = React.useState(false)
-
-
     const clicked = function () {
-        console.log("Clickedasdasdasd");
         setLiked(!liked);
     }
 
@@ -18,6 +15,3 @@ function LikeButton(props) {
     );
 
 }
-
-const domContainer = document.querySelector('#root');
-ReactDOM.render(React.createElement(LikeButton), domContainer);
