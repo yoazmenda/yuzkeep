@@ -1,27 +1,21 @@
 'use strict';
 
-class LikeButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {liked: false};
-        this.clicked = this.clicked.bind(this);
-    }
+function LikeButton(props) {
+    const [liked, setLiked] = React.useState(false)
 
-    clicked() {
+
+    const clicked = function () {
         console.log("Clickedasdasdasd");
-        this.setState({liked: !this.state.liked});
+        setLiked(!liked);
     }
 
-    render() {
-        return (
-            <div>
-                <button onClick={this.clicked}> Click me</button>
-                <h1>button state:</h1>
-                <h1>{this.state.liked ? "True" : "False"}</h1>
-            </div>
-        )
-            ;
-    }
+    return (
+        <div>
+            <button onClick={clicked}> Click me</button>
+            <h1>button state:</h1>
+            <h1>{liked ? "True" : "False"}</h1>
+        </div>
+    );
 
 }
 
